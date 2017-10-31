@@ -7,12 +7,15 @@ public class MovementScript : MonoBehaviour {
 Animator anim;
 		
 //Constants
+public float speed = 10;
 
+private Rigidbody playerRigidbody;
 
 
 
 void Start () {
 		anim = GetComponent<Animator> ();
+		playerRigidbody = GetComponent<Rigidbody> ();
 	}
 
 
@@ -21,6 +24,12 @@ void Update () {
 		if (Input.GetKeyDown(KeyCode.W))
 			{
 			anim.Play( "forward" );
+//			playerRigidbody.velocity = new Vector3(0,0,0);
+//			playerRigidbody.AddForce (new Vector3(0,speed,0), ForceMode.Impulse);
+
+//			playerRigidbody.AddForce (transform.forward * speed);
+
+//			playerRigidbody.velocity = new Vector3(speed,0, 0);
 			}
 
 		if (Input.GetKeyDown(KeyCode.A))
