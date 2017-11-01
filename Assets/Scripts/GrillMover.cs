@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mover : MonoBehaviour {
+public class GrillMover : MonoBehaviour {
 
 	public Vector3 spawn = new Vector3();
 	public float onward = 10;
-	public int startingHealth = 100;
-	public int currentHealth;
-	public Slider PlayerFulfilmentBar;
+	public int grillStartingHealth = 100;
+	public int grillCurrentHealth;
+	public Slider GrillFulfilmentBar;
 
 
 	private Rigidbody myRigidbody;
@@ -17,9 +17,9 @@ public class Mover : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myRigidbody = GetComponent<Rigidbody> ();
-		currentHealth = startingHealth;
+		grillCurrentHealth = grillStartingHealth;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
@@ -29,14 +29,14 @@ public class Mover : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.A))
 		{
 			myRigidbody.velocity = new Vector3 (0, 0, -onward);
-			currentHealth -= 10;
-			PlayerFulfilmentBar.value = currentHealth;
+			grillCurrentHealth += 10;
+			GrillFulfilmentBar.value = grillCurrentHealth;
 		}
 		if (Input.GetKeyDown(KeyCode.D))
 		{
 			myRigidbody.velocity = new Vector3 (0, 0, onward);
-			currentHealth += 10;
-			PlayerFulfilmentBar.value = currentHealth;
+			grillCurrentHealth -= 10;
+			GrillFulfilmentBar.value = grillCurrentHealth;
 		}
 		if (Input.GetKeyDown(KeyCode.S))
 		{
