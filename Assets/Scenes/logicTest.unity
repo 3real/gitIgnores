@@ -445,7 +445,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1357977380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd96f644b708645c09dc2fab371612c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d21b55f275a042c2b9eb3428d6f1833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
@@ -458,7 +458,7 @@ Animator:
   m_GameObject: {fileID: 1357977380}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7314708a3515b425694fd3143c4e18fb, type: 2}
+  m_Controller: {fileID: 9100000, guid: f182a45a7bcee4d1abe2816aba9bd5c8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
